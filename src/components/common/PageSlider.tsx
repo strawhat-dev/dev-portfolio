@@ -64,6 +64,8 @@ export const PageSlider = ({
           aria-required="true"
           aria-label="page-slider"
           aria-valuetext={`${currentPage}`}
+          getAriaLabel={() => 'page-slider'}
+          getAriaValueText={() => `${currentPage}`}
           size="small"
           value={sliderValue}
           onChange={(_, x) => handleSliderChange(x)}
