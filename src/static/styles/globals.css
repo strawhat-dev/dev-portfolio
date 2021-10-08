@@ -71,6 +71,17 @@ img::selection,
   transform-style: preserve-3d;
 }
 
+.card-font {
+  -webkit-transform: rotateY(0deg);
+}
+
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+}
+
 .card-front,
 .card-back {
   display: flex;
@@ -80,13 +91,6 @@ img::selection,
   align-items: center;
   justify-content: center;
   backface-visibility: hidden;
-}
-
-.card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotateY(180deg);
 }
 
 .ml11 {
