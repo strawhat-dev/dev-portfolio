@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import anime from 'animejs';
 import { ReactElement, useState } from 'react';
-import { Paper } from '@mui/material';
+import { Box, Paper } from '@mui/material';
 
 interface ExpCard {
   cardHeader: ReactElement;
@@ -41,20 +41,36 @@ export const ExpCard = ({ cardHeader, cardInfo, logo, sliding }: ExpCard) => {
   };
 
   return (
-    <Paper
-      className="card"
-      onClick={() => handleClick()}
-      onMouseEnter={() => handleHover(1.1)}
-      onMouseLeave={() => handleHover(1)}
-      sx={{ width: '40vw', height: '50vh', minWidth: '50rem', zIndex: 999 }}
+    <Box
+      className="card-container"
+      sx={{
+        width: '40vw',
+        height: '50vh',
+        minWidth: '50rem',
+        perspective: '1400px',
+        zIndex: 999,
+      }}
     >
-      <Paper className="card-front" elevation={24}>
-        <Image src={logo} alt="exp-logo" width="200rem" height="200rem" />
-      </Paper>
-      <Paper className="card-back" elevation={24}>
-        {cardHeader}
-        {cardInfo}
-      </Paper>
-    </Paper>
+      <Box
+        className="card"
+        onClick={() => handleClick()}
+        onMouseEnter={() => handleHover(1.1)}
+        onMouseLeave={() => handleHover(1)}
+        sx={{
+          position: 'relative',
+          width: '100%',
+          height: '100%',
+          transformStyle: 'preserve-3d',
+        }}
+      >
+        <Paper className="card-front" elevation={24}>
+          <Image src={logo} alt="exp-logo" width="200rem" height="200rem" />
+        </Paper>
+        <Paper className="card-back" elevation={24}>
+          {cardHeader}
+          {cardInfo}
+        </Paper>
+      </Box>
+    </Box>
   );
 };

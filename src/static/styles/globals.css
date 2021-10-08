@@ -67,19 +67,17 @@ img::selection,
   }
 }
 
-.card {
-  transform-style: preserve-3d;
-}
-
 .card-font {
-  -webkit-transform: rotateY(0deg);
+  background: white;
+  transform: rotateY(0deg);
 }
 
 .card-back {
+  background: white;
+  transform: rotateY(180deg);
   position: absolute;
   top: 0;
   left: 0;
-  transform: rotateY(180deg);
 }
 
 .card-front,
