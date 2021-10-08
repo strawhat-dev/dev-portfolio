@@ -22,7 +22,7 @@ export const InfoAccordion = () => {
         onChange={() => handleChange('about')}
       >
         <AccordionSummary aria-controls="about-content" id="about-header">
-          <Typography fontSize="2rem">about dev portfolio.</Typography>
+          <Typography variant="h4">about dev portfolio.</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <AboutDetails />
@@ -34,7 +34,7 @@ export const InfoAccordion = () => {
         onChange={() => handleChange('contact')}
       >
         <AccordionSummary aria-controls="contact-content" id="contact-header">
-          <Typography fontSize="2rem">contact.</Typography>
+          <Typography variant="h4">contact.</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <ContactDetails />

@@ -34,7 +34,6 @@ export const Navbar = ({ currentPage, setPage }: Navbar) => {
         color="transparent"
         position="static"
         sx={{
-          fontFamily: 'Roboto',
           overflow: 'auto',
           boxShadow: 0,
         }}
