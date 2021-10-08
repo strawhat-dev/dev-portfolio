@@ -168,17 +168,20 @@ export const ContactDetails = () => {
         >
           Email
         </Button>
-        <Link href="https://www.linkedin.com/in/kevin-tran-189aa91a7/" passHref>
-          <Button
-            variant="contained"
-            size="large"
-            color="primary"
-            endIcon={<LinkedIn />}
-            sx={{ width: '10rem' }}
-          >
-            LinkedIn
-          </Button>
-        </Link>
+        <NewTabLink
+          href="https://www.linkedin.com/in/kevin-tran-189aa91a7/"
+          content={
+            <Button
+              variant="contained"
+              size="large"
+              color="primary"
+              endIcon={<LinkedIn />}
+              sx={{ width: '10rem' }}
+            >
+              LinkedIn
+            </Button>
+          }
+        />
       </Box>
       <Box
         sx={{
