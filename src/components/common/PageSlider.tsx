@@ -66,6 +66,12 @@ export const PageSlider = ({
           value={sliderValue}
           onChange={(_, x) => handleSliderChange(x)}
           onChangeCommitted={() => setOpacity(1)}
+          onKeyDown={(e) => {
+            e.preventDefault();
+            e.key === 'ArrowLeft'
+              ? setPage(currentPage === 0 ? currentPage : currentPage - 1)
+              : setPage(currentPage === 4 ? currentPage : currentPage + 1);
+          }}
           sx={{ width: '40vw' }}
         />
         <IconButton
