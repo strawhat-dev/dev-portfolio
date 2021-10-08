@@ -61,7 +61,6 @@ export const PageSlider = ({
           <ChevronLeft />
         </IconButton>
         <Slider
-          role="slider"
           title="page-slider"
           aria-label="page-slider"
           aria-hidden="true"
