@@ -1,0 +1,43 @@
+{
+  "name": "a1-personal-portfolio-strawhat-dev",
+  "private": true,
+  "browserslist": [
+    ">0.3%",
+    "not ie 11",
+    "not dead",
+    "not op_mini all"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@fontsource/roboto": "^4.5.1",
+    "@mui/icons-material": "^5.0.3",
+    "@mui/material": "^5.0.3",
+    "animejs": "^3.2.1",
+    "cors": "^2.8.5",
+    "darkreader": "^4.9.39",
+    "js-cookie": "^3.0.1",
+    "next": "11.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hotkeys-hook": "^3.4.3",
+    "react-responsive": "^9.0.0-beta.4",
+    "sharp": "^0.29.1"
+  },
+  "devDependencies": {
+    "@types/animejs": "^3.1.4",
+    "@types/js-cookie": "^3.0.0",
+    "@types/react": "17.0.27",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.4.1",
+    "typescript": "4.4.3"
+  }
+}
