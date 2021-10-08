@@ -61,11 +61,10 @@ export const PageSlider = ({
           <ChevronLeft />
         </IconButton>
         <Slider
-          id="page-slider"
+          role="slider"
           title="page-slider"
           aria-label="page-slider"
-          aria-labelledby="page-slider"
-          aria-required="true"
+          aria-hidden="true"
           size="small"
           value={sliderValue}
           onChange={(_, x) => handleSliderChange(x)}
