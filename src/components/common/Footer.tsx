@@ -3,14 +3,7 @@ import { NewTabLink } from '@/components/common/NewTabLink';
 
 export const Footer = () => {
   return (
-    <footer
-      style={{
-        position: 'absolute',
-        bottom: 0,
-        width: '100vw',
-        height: '64px',
-      }}
-    >
+    <footer>
       <NewTabLink
         href="https://vercel.com"
         content={
