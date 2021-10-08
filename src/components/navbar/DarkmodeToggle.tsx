@@ -38,8 +38,16 @@ export const DarkmodeToggle = () => {
         <Switch
           checked={darkmode}
           onChange={handleChange}
+          role="switch"
+          title="darkmode-toggle"
           aria-label="darkmode-toggle"
-          inputProps={{ 'aria-label': 'controlled' }}
+          aria-required="true"
+          inputProps={{
+            role: 'switch',
+            title: 'darkmode-toggle',
+            'aria-label': 'darkmode-toggle',
+            'aria-required': 'true',
+          }}
         />
       </Tooltip>
     </>
