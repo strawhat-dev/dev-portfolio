@@ -45,8 +45,7 @@ img::selection,
 .navtitle::selection,
 .navlink::selection,
 .MuiChip-label::selection {
-  color: none !important;
-  background: none !important;
+  background-color: transparent !important;
 }
 
 .sphere-animation {
