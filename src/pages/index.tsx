@@ -39,7 +39,7 @@ export default function Index() {
   });
 
   return (
-    <>
+    <div>
       <Header />
       <Navbar currentPage={page} setPage={setPage} />
       <Divider />
@@ -50,6 +50,6 @@ export default function Index() {
         setOpacity={setOpacity}
       />
       <Footer />
-    </>
+    </div>
   );
 }
