@@ -39,7 +39,6 @@ export const DarkmodeToggle = () => {
           checked={darkmode}
           onChange={handleChange}
           inputProps={{
-            role: 'switch',
             title: 'darkmode-toggle',
             'aria-label': 'darkmode-toggle',
             'aria-required': 'true',

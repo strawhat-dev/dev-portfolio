@@ -63,7 +63,6 @@ export const PageSlider = ({
         <Slider
           title="page-slider"
           aria-label="page-slider"
-          aria-hidden="true"
           size="small"
           value={sliderValue}
           onChange={(_, x) => handleSliderChange(x)}
