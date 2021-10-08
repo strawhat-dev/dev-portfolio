@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Box, Button, Divider, Typography } from '@mui/material';
 import { GitHub, LinkedIn, Email } from '@mui/icons-material';
 import { SkillItem } from '@/components/skills/SkillItems';
+import { NewTabLink } from '@/components/common/NewTabLink';
 
 export const AboutDetails = () => (
   <Typography>
@@ -56,12 +57,16 @@ export const AboutDetails = () => (
       <strong>Credits:</strong>
       <br />
       Sphere and stagger animations adapted from{' '}
-      <Link href="https://github.com/juliangarnier/anime/#demos-and-examples">
-        Juilan Garnier
-      </Link>
+      <NewTabLink
+        href="https://github.com/juliangarnier/anime/#demos-and-examples"
+        content={<strong>Juilan Garnier</strong>}
+      />
       <br />
       Moving letters animations adapted from{' '}
-      <Link href="https://tobiasahlin.com/moving-letters/">Tobia Sahlin</Link>
+      <NewTabLink
+        href="https://tobiasahlin.com/moving-letters/"
+        content={<strong>Tobia Sahlin</strong>}
+      />
     </Box>
     <Divider />
     <Box
@@ -72,11 +77,14 @@ export const AboutDetails = () => (
         paddingBottom: '1rem',
       }}
     >
-      <Link href="https://github.com/strawhat-dev/dev-portfolio" passHref>
-        <Button variant="outlined" color="inherit" endIcon={<GitHub />}>
-          View Source
-        </Button>
-      </Link>
+      <NewTabLink
+        href="https://github.com/strawhat-dev/dev-portfolio"
+        content={
+          <Button variant="outlined" color="inherit" endIcon={<GitHub />}>
+            View Source
+          </Button>
+        }
+      />
     </Box>
   </Typography>
 );

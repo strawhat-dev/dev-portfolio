@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { NewTabLink } from '@/components/common/NewTabLink';
 
 export const Footer = () => {
   return (
@@ -10,16 +11,12 @@ export const Footer = () => {
         height: '64px',
       }}
     >
-      <a
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ maxWidth: 'fit-content' }}
-      >
-        <span>
+      <NewTabLink
+        href="https://vercel.com"
+        content={
           <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </span>
-      </a>
+        }
+      />
     </footer>
   );
 };
