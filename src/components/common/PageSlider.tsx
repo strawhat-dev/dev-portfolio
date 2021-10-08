@@ -62,6 +62,7 @@ export const PageSlider = ({
         </IconButton>
         <Slider
           aria-label="page-slider"
+          aria-valuetext={`${currentPage}`}
           size="small"
           value={sliderValue}
           onChange={(_, x) => handleSliderChange(x)}
