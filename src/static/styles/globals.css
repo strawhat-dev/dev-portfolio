@@ -13,6 +13,10 @@
   src: url('../fonts/meslo.woff2') format('woff2');
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 a,
 a:hover,
 a:focus,
@@ -35,6 +39,14 @@ footer a {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
+}
+
+img::selection,
+.navtitle::selection,
+.navlink::selection,
+.MuiChip-label::selection {
+  color: none !important;
+  background: none !important;
 }
 
 .sphere-animation {

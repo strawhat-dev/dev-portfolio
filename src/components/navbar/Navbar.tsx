@@ -15,6 +15,7 @@ const NavTitle = () => {
   return (
     <Link href="/" passHref>
       <Typography
+        className="navtitle"
         variant="h6"
         onMouseDown={() => setFace('(づ ಠ_ಠ )づ')}
         onMouseUp={() => setFace('(づ ◕‿◕ )づ')}

@@ -9,6 +9,7 @@ interface NavLink {
 export const NavLink = ({ text, fontWeight, onClick }: NavLink) => {
   return (
     <Typography
+      className="navlink"
       onClick={onClick}
       variant="body1"
       sx={{ cursor: 'pointer', fontWeight: fontWeight }}
