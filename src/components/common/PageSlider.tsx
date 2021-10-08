@@ -61,6 +61,7 @@ export const PageSlider = ({
           <ChevronLeft />
         </IconButton>
         <Slider
+          aria-required="true"
           aria-label="page-slider"
           aria-valuetext={`${currentPage}`}
           size="small"
