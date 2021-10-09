@@ -121,7 +121,7 @@ export const ContactDetails = ({ isMobile }: { isMobile: any }) => {
         translateX: [
           0,
           document.querySelector('.ml11 .letters')!.getBoundingClientRect()
-            .width + 15,
+            .width + 10,
         ],
         easing: 'easeOutExpo',
         duration: 700,
@@ -146,7 +146,7 @@ export const ContactDetails = ({ isMobile }: { isMobile: any }) => {
         targets: '.ml11 .line',
         translateX: [
           document.querySelector('.ml11 .letters')!.getBoundingClientRect()
-            .width + 15,
+            .width + 10,
           0,
         ],
         complete: () => setDisabled(false),
