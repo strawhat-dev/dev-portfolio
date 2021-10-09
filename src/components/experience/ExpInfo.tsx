@@ -1,12 +1,5 @@
 import { Typography } from '@mui/material';
 
-{
-  /* <Typography fontFamily="Zilla" variant="body1" margin="4% 10%"> */
-}
-{
-  /* <Typography fontFamily="Bogle" variant="body1" margin="4% 10%"> */
-}
-
 type Infos = {
   [key: string]: any[];
 };
