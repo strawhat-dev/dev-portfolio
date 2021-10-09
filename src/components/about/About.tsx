@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { Container, Box, Typography, Stack } from '@mui/material';
+import { ArrowRightAlt } from '@mui/icons-material/';
 import { Sphere } from '@/components/about/Sphere';
 import { animate } from '@/util/animate';
-import { ArrowRightAlt } from '@mui/icons-material/';
 
 const SwipeHeader = () => (
   <Box

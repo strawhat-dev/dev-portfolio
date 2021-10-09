@@ -169,7 +169,7 @@ export const ContactDetails = ({ isMobile }: { isMobile: any }) => {
           endIcon={<Email />}
           onClick={() => handleClick()}
           disabled={disabled}
-          sx={{ width: '10rem' }}
+          sx={{ width: isMobile ? '35vw' : '10rem' }}
         >
           Email
         </Button>
@@ -181,7 +181,7 @@ export const ContactDetails = ({ isMobile }: { isMobile: any }) => {
               size="large"
               color="primary"
               endIcon={<LinkedIn />}
-              sx={{ width: '10rem' }}
+              sx={{ width: isMobile ? '35vw' : '10rem' }}
             >
               LinkedIn
             </Button>
