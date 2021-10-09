@@ -27,7 +27,6 @@ a:active {
 
 footer {
   font-family: 'Roboto';
-  position: absolute;
   bottom: 0;
   width: 100vw;
   height: 64px;
@@ -62,19 +61,6 @@ img::selection,
   }
 }
 
-.card-font {
-  background: white;
-  transform: rotateY(0deg);
-}
-
-.card-back {
-  background: white;
-  transform: rotateY(180deg);
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
 .card-front,
 .card-back {
   display: flex;
@@ -84,6 +70,20 @@ img::selection,
   align-items: center;
   justify-content: center;
   backface-visibility: hidden;
+}
+
+.card-font {
+  background: white;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  justify-content: flex-start;
+  background: white;
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .ml11 {

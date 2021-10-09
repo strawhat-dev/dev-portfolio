@@ -6,6 +6,7 @@ interface CardHeader {
   years: string;
   fontFamily: string;
   color: string;
+  isMobile: any;
 }
 
 export const CardHeader = ({
@@ -14,27 +15,35 @@ export const CardHeader = ({
   years,
   fontFamily,
   color,
+  isMobile,
 }: CardHeader) => {
   return (
-    <Stack>
-      <Typography variant="h2" sx={{ fontFamily: fontFamily, color: color }}>
+    <Stack sx={{ marginTop: '5%' }}>
+      <Typography
+        variant="h2"
+        fontFamily={fontFamily}
+        color={color}
+        fontSize={isMobile ? '1em' : 'inherit'}
+        textAlign="center"
+      >
         {title}
       </Typography>
       <Typography
         variant="h4"
-        sx={{ fontFamily: fontFamily, color: color, textAlign: 'center' }}
+        fontFamily={fontFamily}
+        color={color}
+        fontSize={isMobile ? '1em' : 'inherit'}
+        textAlign="center"
       >
         {location}
       </Typography>
       <Typography
         variant="h6"
-        sx={{
-          fontFamily: fontFamily,
-          fontWeight: 'lighter',
-          fontStyle: 'italic',
-          textAlign: 'center',
-          color: 'gray',
-        }}
+        fontFamily={fontFamily}
+        fontWeight="lighter"
+        fontStyle="italic"
+        textAlign="center"
+        color="gray"
       >
         {years}
       </Typography>

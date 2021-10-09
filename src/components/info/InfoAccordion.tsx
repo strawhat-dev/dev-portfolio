@@ -7,25 +7,27 @@ import {
   AccordionDetails,
 } from '@/components/styled-material/StyledMaterial';
 
-export const InfoAccordion = () => {
+export const InfoAccordion = ({ isMobile }: { isMobile: any }) => {
   const [expanded, setExpanded] = useState<string | false>(false);
 
   const handleChange = (panel: string) => {
     setExpanded(expanded === panel ? false : panel);
   };
 
+  const headerVariant = isMobile ? 'h6' : 'h5';
+
   return (
-    <Stack sx={{ width: '40rem' }}>
+    <Stack sx={{ width: isMobile ? '90%' : '40rem' }}>
       <Accordion
         className="ani-right"
         expanded={expanded === 'about'}
         onChange={() => handleChange('about')}
       >
         <AccordionSummary aria-controls="about-content" id="about-header">
-          <Typography variant="h5">about dev portfolio.</Typography>
+          <Typography variant={headerVariant}>about dev portfolio.</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <AboutDetails />
+          <AboutDetails isMobile={isMobile} />
         </AccordionDetails>
       </Accordion>
       <Accordion
@@ -34,10 +36,10 @@ export const InfoAccordion = () => {
         onChange={() => handleChange('contact')}
       >
         <AccordionSummary aria-controls="contact-content" id="contact-header">
-          <Typography variant="h5">contact.</Typography>
+          <Typography variant={headerVariant}>contact.</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <ContactDetails />
+          <ContactDetails isMobile={isMobile} />
         </AccordionDetails>
       </Accordion>
     </Stack>

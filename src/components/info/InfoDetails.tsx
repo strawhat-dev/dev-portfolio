@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import anime from 'animejs';
 import { useState } from 'react';
 import { Box, Button, Divider, Typography } from '@mui/material';
@@ -6,7 +5,7 @@ import { GitHub, LinkedIn, Email } from '@mui/icons-material';
 import { SkillItem } from '@/components/skills/SkillItems';
 import { NewTabLink } from '@/components/common/NewTabLink';
 
-export const AboutDetails = () => (
+export const AboutDetails = ({ isMobile }: { isMobile: any }) => (
   <Typography>
     <Box>
       <strong>Page may be navigated through any of the following means:</strong>
@@ -16,6 +15,7 @@ export const AboutDetails = () => (
           'slider',
           'arrow buttons adjacent to slider',
           'left + right arrow keys',
+          '... or swiping if on mobile',
         ].map((x, i) => (
           <em key={i}>
             <li>{x}</li>
@@ -29,9 +29,12 @@ export const AboutDetails = () => (
       <Box
         sx={{
           display: 'grid',
-          grid: 'repeat(2, auto) / repeat(3, auto)',
+          grid: isMobile
+            ? 'repeat(3, auto) / repeat(2, auto)'
+            : 'repeat(2, auto) / repeat(3, auto)',
           gap: '1rem 2rem',
           justifyContent: 'center',
+          marginTop: '5%',
         }}
       >
         {[
@@ -89,8 +92,10 @@ export const AboutDetails = () => (
   </Typography>
 );
 
-export const ContactDetails = () => {
+export const ContactDetails = ({ isMobile }: { isMobile: any }) => {
   const [disabled, setDisabled] = useState(false);
+
+  const emailVariant = isMobile ? 'h5' : 'h3';
 
   const handleClick = () => {
     setDisabled(true);
@@ -195,14 +200,14 @@ export const ContactDetails = () => {
           <Box className="text-wrapper">
             <Typography
               className="line line1"
-              variant="h3"
+              variant={emailVariant}
               sx={{ fontFamily: 'Meslo' }}
             >
               |
             </Typography>
             <Typography
               className="letters"
-              variant="h3"
+              variant={emailVariant}
               sx={{ fontFamily: 'Meslo' }}
             >
               trankn4@uci.edu

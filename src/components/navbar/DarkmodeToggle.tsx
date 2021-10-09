@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie';
 import { useState, useEffect } from 'react';
-import { Switch, Tooltip } from '@mui/material';
+import { Switch, Tooltip, Stack } from '@mui/material';
 import { DarkMode } from '@mui/icons-material';
 
 const EXP = { expires: new Date('1/19/38') };
@@ -32,7 +32,7 @@ export const DarkmodeToggle = () => {
   };
 
   return (
-    <>
+    <Stack direction="row" sx={{ display: 'flex', alignItems: 'center' }}>
       <DarkMode />
       <Tooltip title="Toggle Dark Mode">
         <Switch
@@ -45,6 +45,6 @@ export const DarkmodeToggle = () => {
           }}
         />
       </Tooltip>
-    </>
+    </Stack>
   );
 };

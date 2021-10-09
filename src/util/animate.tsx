@@ -37,7 +37,7 @@ export const animate = () => {
   });
 
   anime.timeline({ loop: false }).add({
-    targets: '.ani',
+    targets: ['.ani'],
     opacity: [0, 1],
     easing: 'easeOutExpo',
     duration: 5000,

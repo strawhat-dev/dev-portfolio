@@ -11,7 +11,13 @@ const attributes = [
   'GPA 3.5',
 ];
 
-export const Education = ({ opacity }: { opacity: number }) => {
+export const Education = ({
+  opacity,
+  isMobile,
+}: {
+  opacity: number;
+  isMobile: any;
+}) => {
   useEffect(() => {
     animate();
   }, []);
@@ -21,32 +27,39 @@ export const Education = ({ opacity }: { opacity: number }) => {
       maxWidth="xl"
       sx={{
         display: 'flex',
+        flexDirection: isMobile ? 'column' : 'row',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: isMobile ? 'space-around' : 'center',
         minHeight: '95vh',
-        marginTop: '-10vh',
+        marginTop: isMobile ? '10px' : '-10vh',
         overflow: 'hidden',
         opacity: opacity,
       }}
     >
-      <Box sx={{ width: '30%' }}>
-        <Typography
-          className="ani-letters"
-          variant="h2"
-          sx={{ fontWeight: 'bold' }}
-          gutterBottom
-        >
-          Education
-        </Typography>
+      <Box sx={{ width: isMobile ? '90%' : '30%' }}>
+        {!isMobile && (
+          <Typography
+            className="ani-letters"
+            variant="h2"
+            sx={{ fontWeight: 'bold' }}
+            gutterBottom
+          >
+            Education
+          </Typography>
+        )}
         <Stack spacing={2}>
           {attributes.map((x, i) => (
-            <Typography key={i} className="ani-letters" variant="body1">
+            <Typography
+              key={i}
+              className="ani-letters"
+              variant={isMobile ? 'h6' : 'body1'}
+            >
               {x}
             </Typography>
           ))}
         </Stack>
       </Box>
-      <Box className="ani-left" sx={{ width: '35%' }}>
+      <Box className="ani-left" sx={{ width: isMobile ? '90%' : '35%' }}>
         <Image src={anteater} alt="anteater" />
       </Box>
     </Container>

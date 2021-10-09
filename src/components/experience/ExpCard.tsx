@@ -8,9 +8,16 @@ interface ExpCard {
   cardInfo: ReactElement;
   logo: StaticImageData;
   sliding: boolean;
+  isMobile: any;
 }
 
-export const ExpCard = ({ cardHeader, cardInfo, logo, sliding }: ExpCard) => {
+export const ExpCard = ({
+  cardHeader,
+  cardInfo,
+  logo,
+  sliding,
+  isMobile,
+}: ExpCard) => {
   const [flipping, setFlipping] = useState(false);
 
   const handleClick = () => {
@@ -44,9 +51,9 @@ export const ExpCard = ({ cardHeader, cardInfo, logo, sliding }: ExpCard) => {
     <Box
       className="card-container"
       sx={{
-        width: '40vw',
-        height: '50vh',
-        minWidth: '50rem',
+        width: isMobile ? '90%' : '40vw',
+        height: isMobile ? '70vh' : '50vh',
+        minWidth: isMobile ? 'inherit' : '50rem',
         perspective: '1400px',
         zIndex: 999,
       }}
@@ -66,7 +73,7 @@ export const ExpCard = ({ cardHeader, cardInfo, logo, sliding }: ExpCard) => {
         <Paper className="card-front" elevation={24}>
           <Image src={logo} alt="exp-logo" width="200rem" height="200rem" />
         </Paper>
-        <Paper className="card-back" elevation={24}>
+        <Paper className="card-back" elevation={24} sx={{ overflowY: 'auto' }}>
           {cardHeader}
           {cardInfo}
         </Paper>

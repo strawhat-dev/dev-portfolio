@@ -1,8 +1,20 @@
 import { Typography } from '@mui/material';
 
-export const UciInfo = () => (
-  <Typography fontFamily="Zilla" variant="body1" margin="4% 10%">
-    <ul>
+{
+  /* <Typography fontFamily="Zilla" variant="body1" margin="4% 10%"> */
+}
+{
+  /* <Typography fontFamily="Bogle" variant="body1" margin="4% 10%"> */
+}
+
+type Infos = {
+  [key: string]: any[];
+};
+
+const infos: Infos = {
+  uci: [
+    'Zilla',
+    <ul key={0}>
       <li>
         Tutor UCI students on general good practices and C++ language concepts
         such as memory allocation, pointers, references, classes, linked lists,
@@ -13,13 +25,11 @@ export const UciInfo = () => (
         Develop strong communication skills and the ability to work well with
         other people, while building a strong foundation in C++.
       </li>
-    </ul>
-  </Typography>
-);
-
-export const WalmartInfo = () => (
-  <Typography fontFamily="Bogle" variant="body1" margin="4% 10%">
-    <ul>
+    </ul>,
+  ],
+  walmart: [
+    'Bogle',
+    <ul key={1}>
       <li>
         Development and deployment of complete web application from scratch, as
         part of Walmart’s transportation execution and visibility rewrite effort
@@ -42,6 +52,29 @@ export const WalmartInfo = () => (
         in a more human readable form and allow users and developers to search
         by different fields.
       </li>
-    </ul>
-  </Typography>
-);
+    </ul>,
+  ],
+};
+
+export const ExpInfo = ({
+  location,
+  isMobile,
+}: {
+  location: string;
+  isMobile: any;
+}) => {
+  const fontFamily = infos[location][0];
+  const content = infos[location][1];
+
+  return (
+    <Typography
+      fontFamily={fontFamily}
+      variant="body1"
+      margin={isMobile ? '0% 4%' : '4% 10%'}
+      marginLeft={isMobile ? '-4%' : 'inherit'}
+      fontSize={isMobile ? '0.9em' : 'inherit'}
+    >
+      {content}
+    </Typography>
+  );
+};

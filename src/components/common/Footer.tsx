@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { NewTabLink } from '@/components/common/NewTabLink';
 
-export const Footer = () => {
+export const Footer = ({ isMobile }: { isMobile: any }) => {
   return (
-    <footer>
+    <footer style={{ position: isMobile ? 'static' : 'absolute' }}>
       <NewTabLink
         href="https://vercel.com"
         content={

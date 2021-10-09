@@ -6,10 +6,18 @@ import { Container, Typography, IconButton } from '@mui/material';
 import { ArrowDropDown, ArrowDropUp } from '@mui/icons-material/';
 import { ExpCard } from '@/components/experience/ExpCard';
 import { CardHeader } from '@/components/experience/CardHeader';
-import { UciInfo, WalmartInfo } from '@/components/experience/ExpInfo';
+import { ExpInfo } from '@/components/experience/ExpInfo';
 import { animate } from '@/util/animate';
 
-const Card = ({ i, sliding }: { i: number; sliding: boolean }) => {
+const Card = ({
+  i,
+  sliding,
+  isMobile,
+}: {
+  i: number;
+  sliding: boolean;
+  isMobile: any;
+}) => {
   const cards = [
     <ExpCard
       key={0}
@@ -20,11 +28,13 @@ const Card = ({ i, sliding }: { i: number; sliding: boolean }) => {
           years="2020"
           fontFamily="Zilla"
           color="#0064A4"
+          isMobile={isMobile}
         />
       }
-      cardInfo={<UciInfo />}
+      cardInfo={<ExpInfo location="uci" isMobile={isMobile} />}
       logo={uci}
       sliding={sliding}
+      isMobile={isMobile}
     />,
     <ExpCard
       key={1}
@@ -35,18 +45,26 @@ const Card = ({ i, sliding }: { i: number; sliding: boolean }) => {
           years="2021"
           fontFamily="Bogle"
           color="#0071CE"
+          isMobile={isMobile}
         />
       }
-      cardInfo={<WalmartInfo />}
+      cardInfo={<ExpInfo location="walmart" isMobile={isMobile} />}
       logo={walmart}
       sliding={sliding}
+      isMobile={isMobile}
     />,
   ];
 
   return cards[i];
 };
 
-export const Experience = ({ opacity }: { opacity: number }) => {
+export const Experience = ({
+  opacity,
+  isMobile,
+}: {
+  opacity: number;
+  isMobile: any;
+}) => {
   const [cardIndex, setCardIndex] = useState(0);
   const [sliding, setSliding] = useState(false);
 
@@ -84,13 +102,15 @@ export const Experience = ({ opacity }: { opacity: number }) => {
         opacity: opacity,
       }}
     >
-      <Typography
-        className="ani-letters"
-        variant="h2"
-        sx={{ marginTop: '5vh', marginBottom: '2vh', fontWeight: 'bold' }}
-      >
-        Experience
-      </Typography>
+      {!isMobile && (
+        <Typography
+          className="ani-letters"
+          variant="h2"
+          sx={{ marginTop: '5vh', marginBottom: '2vh', fontWeight: 'bold' }}
+        >
+          Experience
+        </Typography>
+      )}
       <IconButton
         aria-label="card-up"
         size="large"
@@ -99,7 +119,7 @@ export const Experience = ({ opacity }: { opacity: number }) => {
       >
         <ArrowDropUp fontSize="large" />
       </IconButton>
-      <Card i={cardIndex} sliding={sliding} />
+      <Card i={cardIndex} sliding={sliding} isMobile={isMobile} />
       <IconButton
         aria-label="card-down"
         size="large"

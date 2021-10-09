@@ -3,7 +3,13 @@ import { Container } from '@mui/material';
 import { InfoAccordion } from '@/components/info/InfoAccordion';
 import { animate } from '@/util/animate';
 
-export const Info = ({ opacity }: { opacity: number }) => {
+export const Info = ({
+  opacity,
+  isMobile,
+}: {
+  opacity: number;
+  isMobile: any;
+}) => {
   useEffect(() => {
     animate();
   }, []);
@@ -16,12 +22,12 @@ export const Info = ({ opacity }: { opacity: number }) => {
         alignItems: 'flex-start',
         justifyContent: 'center',
         minHeight: '95vh',
-        paddingTop: '7vh',
+        paddingTop: isMobile ? '7%' : '7vh',
         overflow: 'hidden',
         opacity: opacity,
       }}
     >
-      <InfoAccordion />
+      <InfoAccordion isMobile={isMobile} />
     </Container>
   );
 };
