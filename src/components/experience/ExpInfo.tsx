@@ -1,8 +1,8 @@
 import { Typography } from '@mui/material';
 
-type Infos = {
+interface Infos {
   [key: string]: any[];
-};
+}
 
 const infos: Infos = {
   uci: [

@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from '@mui/icons-material/';
 
 const adjustedSliderValue = [0, 30, 50, 70, 100];
 
-const adjustedOpacity = (x: number, currentPage: any) => {
+const adjustedOpacity = (x: number, currentPage: number) => {
   let factor = adjustedSliderValue[currentPage];
   if (factor === 0) factor = 10;
   if (factor === 100) factor = 90;

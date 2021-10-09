@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
-import { useHotkeys } from 'react-hotkeys-hook';
+import { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
+import { useHotkeys } from 'react-hotkeys-hook';
 import { useMediaQuery } from 'react-responsive';
 import { Divider, Box } from '@mui/material';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material/';

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { NewTabLink } from '@/components/common/NewTabLink';
 
-export const Footer = ({ isMobile }: { isMobile: any }) => {
+export const Footer = ({ isMobile }: { isMobile: boolean }) => {
   return (
     <footer style={{ position: isMobile ? 'static' : 'absolute' }}>
       <NewTabLink

@@ -7,7 +7,7 @@ import {
   AccordionDetails,
 } from '@/components/styled-material/StyledMaterial';
 
-export const InfoAccordion = ({ isMobile }: { isMobile: any }) => {
+export const InfoAccordion = ({ isMobile }: { isMobile: boolean }) => {
   const [expanded, setExpanded] = useState<string | false>(false);
 
   const handleChange = (panel: string) => {

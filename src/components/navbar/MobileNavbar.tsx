@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { Typography, Box, AppBar, Toolbar } from '@mui/material';
 import { DarkmodeToggle } from '@/components/navbar/DarkmodeToggle';
 
+const NAVITEMS = ['About', 'Education', 'Experience', 'Skills', 'Info'];
+
 const NavTitle = () => (
   <Link href="/" passHref>
     <Typography className="navtitle" lineHeight="1" sx={{ cursor: 'pointer' }}>
@@ -11,8 +13,6 @@ const NavTitle = () => (
     </Typography>
   </Link>
 );
-
-const NAVITEMS = ['About', 'Education', 'Experience', 'Skills', 'Info'];
 
 export const MobileNavbar = ({ currentPage }: { currentPage: number }) => {
   return (

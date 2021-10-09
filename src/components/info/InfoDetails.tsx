@@ -96,6 +96,7 @@ export const ContactDetails = ({ isMobile }: { isMobile: any }) => {
   const [disabled, setDisabled] = useState(false);
 
   const emailVariant = isMobile ? 'h5' : 'h3';
+  const buttonWidth = isMobile ? '35vw' : '10rem';
 
   const handleClick = () => {
     setDisabled(true);
@@ -169,7 +170,7 @@ export const ContactDetails = ({ isMobile }: { isMobile: any }) => {
           endIcon={<Email />}
           onClick={() => handleClick()}
           disabled={disabled}
-          sx={{ width: isMobile ? '35vw' : '10rem', cursor: 'pointer' }}
+          sx={{ width: buttonWidth, cursor: 'pointer' }}
         >
           Email
         </Button>
@@ -181,7 +182,7 @@ export const ContactDetails = ({ isMobile }: { isMobile: any }) => {
               size="large"
               color="primary"
               endIcon={<LinkedIn />}
-              sx={{ width: isMobile ? '35vw' : '10rem', cursor: 'pointer' }}
+              sx={{ width: buttonWidth, cursor: 'pointer' }}
             >
               LinkedIn
             </Button>
