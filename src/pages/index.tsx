@@ -1,10 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { useSwipeable } from 'react-swipeable';
 import { useMediaQuery } from 'react-responsive';
 import { Divider, Box } from '@mui/material';
 import { ChevronLeft, ChevronRight } from '@mui/icons-material/';
-import { Header } from '@/components/common/Header';
 import { Footer } from '@/components/common/Footer';
 import { Navbar } from '@/components/navbar/Navbar';
 import { MobileNavbar } from '@/components/navbar/MobileNavbar';
@@ -49,7 +48,7 @@ const MobileArrows = () => (
 );
 
 export default function Index() {
-  const isMobile = useMediaQuery({ minWidth: '320px', maxWidth: '480px' });
+  const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
   const [page, setPage] = useState(0);
   const [opacity, setOpacity] = useState(1);
 
@@ -68,7 +67,6 @@ export default function Index() {
 
   return (
     <div {...swipeHandlers}>
-      <Header />
       {isMobile ? (
         <MobileNavbar currentPage={page} />
       ) : (
