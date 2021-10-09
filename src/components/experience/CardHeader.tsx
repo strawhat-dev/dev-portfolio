@@ -23,7 +23,7 @@ export const CardHeader = ({
         variant="h2"
         fontFamily={fontFamily}
         color={color}
-        fontSize={isMobile ? '1em' : 'inherit'}
+        fontSize={isMobile ? '1em' : '4em'}
         textAlign="center"
       >
         {title}
@@ -32,7 +32,7 @@ export const CardHeader = ({
         variant="h4"
         fontFamily={fontFamily}
         color={color}
-        fontSize={isMobile ? '1em' : 'inherit'}
+        fontSize={isMobile ? '1em' : '3em'}
         textAlign="center"
       >
         {location}
@@ -42,8 +42,9 @@ export const CardHeader = ({
         fontFamily={fontFamily}
         fontWeight="lighter"
         fontStyle="italic"
-        textAlign="center"
         color="gray"
+        fontSize={isMobile ? '1em' : '2em'}
+        textAlign="center"
       >
         {years}
       </Typography>

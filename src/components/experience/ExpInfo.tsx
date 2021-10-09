@@ -71,8 +71,8 @@ export const ExpInfo = ({
       fontFamily={fontFamily}
       variant="body1"
       margin={isMobile ? '0% 4%' : '4% 10%'}
-      marginLeft={isMobile ? '-4%' : 'inherit'}
-      fontSize={isMobile ? '0.9em' : 'inherit'}
+      marginLeft={isMobile ? '-4%' : '4%'}
+      fontSize={isMobile ? '0.9em' : '1.5em'}
     >
       {content}
     </Typography>
