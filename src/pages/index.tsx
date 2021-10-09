@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { useMediaQuery } from 'react-responsive';
@@ -51,12 +51,6 @@ export default function Index() {
   const isMobile = useMediaQuery({ query: '(max-width: 480px)' });
   const [page, setPage] = useState(0);
   const [opacity, setOpacity] = useState(1);
-
-  useEffect(() => {
-    if (isMobile) {
-      window.scrollTo(0, 1);
-    }
-  }, []);
 
   useHotkeys('left,right', (_, handler) => {
     handler.key === 'left'
