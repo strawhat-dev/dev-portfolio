@@ -6,7 +6,7 @@ import { SkillItem } from '@/components/skills/SkillItems';
 import { NewTabLink } from '@/components/common/NewTabLink';
 
 export const AboutDetails = ({ isMobile }: { isMobile: any }) => (
-  <Typography>
+  <Typography component="div">
     <Box>
       <strong>Page may be navigated through any of the following means:</strong>
       <ol>

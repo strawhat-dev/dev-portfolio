@@ -68,6 +68,7 @@ export const ExpInfo = ({
 
   return (
     <Typography
+      component="div"
       fontFamily={fontFamily}
       variant="body1"
       margin={isMobile ? '0% 4%' : '4% 10%'}

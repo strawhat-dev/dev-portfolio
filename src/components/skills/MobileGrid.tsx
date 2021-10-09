@@ -2,6 +2,8 @@ import { Grid } from '@mui/material';
 import { skills, SkillItem } from '@/components/skills/SkillItems';
 
 export const MobileGrid = () => {
+  const classNames = ['ani-right', 'ani-left'];
+
   return (
     <Grid
       justifyContent="space-around"
@@ -12,7 +14,14 @@ export const MobileGrid = () => {
       {Object.values(skills)
         .flat()
         .map((x, i) => (
-          <Grid key={i} item xs={5}>
+          <Grid
+            className={
+              classNames[Math.floor(Math.random() * classNames.length)]
+            }
+            key={i}
+            xs={5}
+            item
+          >
             <SkillItem key={i} label={x} />
           </Grid>
         ))}
