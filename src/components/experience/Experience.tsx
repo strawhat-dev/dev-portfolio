@@ -16,7 +16,7 @@ const Card = ({
 }: {
   i: number;
   sliding: boolean;
-  isMobile: any;
+  isMobile: boolean;
 }) => {
   const cards = [
     <ExpCard
@@ -63,7 +63,7 @@ export const Experience = ({
   isMobile,
 }: {
   opacity: number;
-  isMobile: any;
+  isMobile: boolean;
 }) => {
   const [cardIndex, setCardIndex] = useState(0);
   const [sliding, setSliding] = useState(false);

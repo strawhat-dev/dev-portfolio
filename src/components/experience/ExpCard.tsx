@@ -8,7 +8,7 @@ interface ExpCard {
   cardInfo: ReactElement;
   logo: StaticImageData;
   sliding: boolean;
-  isMobile: any;
+  isMobile: boolean;
 }
 
 export const ExpCard = ({

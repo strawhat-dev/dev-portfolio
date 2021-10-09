@@ -29,7 +29,7 @@ export const About = ({
   isMobile,
 }: {
   opacity: number;
-  isMobile: any;
+  isMobile: boolean;
 }) => {
   useEffect(() => {
     animate();

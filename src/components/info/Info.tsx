@@ -8,7 +8,7 @@ export const Info = ({
   isMobile,
 }: {
   opacity: number;
-  isMobile: any;
+  isMobile: boolean;
 }) => {
   useEffect(() => {
     animate();

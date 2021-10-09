@@ -25,7 +25,7 @@ export const Skills = ({
   isMobile,
 }: {
   opacity: number;
-  isMobile: any;
+  isMobile: boolean;
 }) => {
   const [secret, setSecret] = useState(0);
   const [disabled, setDisabled] = useState(false);

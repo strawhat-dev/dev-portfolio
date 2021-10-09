@@ -6,7 +6,7 @@ interface CardHeader {
   years: string;
   fontFamily: string;
   color: string;
-  isMobile: any;
+  isMobile: boolean;
 }
 
 export const CardHeader = ({

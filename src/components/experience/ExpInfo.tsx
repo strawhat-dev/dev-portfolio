@@ -54,7 +54,7 @@ export const ExpInfo = ({
   isMobile,
 }: {
   location: string;
-  isMobile: any;
+  isMobile: boolean;
 }) => {
   const fontFamily = infos[location][0];
   const content = infos[location][1];

@@ -17,7 +17,7 @@ import { PageSlider } from '@/components/common/PageSlider';
 interface Page {
   i: number;
   opacity: number;
-  isMobile: any;
+  isMobile: boolean;
 }
 
 const Page = ({ i, opacity, isMobile }: Page) => {

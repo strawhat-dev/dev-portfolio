@@ -16,7 +16,7 @@ export const Education = ({
   isMobile,
 }: {
   opacity: number;
-  isMobile: any;
+  isMobile: boolean;
 }) => {
   useEffect(() => {
     animate();
